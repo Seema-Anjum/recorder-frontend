@@ -2,7 +2,7 @@ import {useState, useEffect, useRef} from "react";
 import RecorderControls from "./Components/RecorderControls";
 import PreviewCard from "./Components/PreviewCard";
 import RecordingsList from "./Components/RecordingsList";
-import "./app.css"
+import "./App.css"
 
 export default function App() {
     const [mediaRecorder, setMediaRecorder] = useState(null);
