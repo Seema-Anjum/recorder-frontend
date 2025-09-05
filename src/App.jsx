@@ -32,7 +32,7 @@ export default function App() {
             const blob = new Blob(localChunks, { type: "video/webm" });
             const url = URL.createObjectURL(blob);
             setVideoURL(url);
-            // Do not push local blob URLs to recordings state
+            // Do not push local blob URLs to the recordings state
         }
 
         recorder.start();
@@ -86,7 +86,7 @@ export default function App() {
     formData.append("video", blob, "recording.webm");
 
     try {
-        const res = await fetch("http://localhost:5000/api/recordings", {
+        const res = await fetch("https://recorder-backend-1-v1ja.onrender.com/api/recordings", {
             method: "POST",
             body: formData,
         });
@@ -103,7 +103,7 @@ export default function App() {
    // Fetch recordings from the server
    const fetchRecordings = async () => {
     try {
-        const res = await fetch("http://localhost:5000/api/recordings");
+        const res = await fetch("https://recorder-backend-1-v1ja.onrender.com/api/recordings");
         const data = await res.json();
         setRecordings(data);
     } catch (error) {
