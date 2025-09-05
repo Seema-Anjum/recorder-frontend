@@ -9,7 +9,7 @@ export default function RecordingList({recordings}) {
                     <div key={rec.id}>
                        <span>{rec.filename}</span> 
                        <video 
-                       src={`http://localhost:5000/api/recordings/${rec.id}`}
+                       src={`https://recorder-backend-1-v1ja.onrender.com/api/recordings/${rec.id}`}
                        controls></video>
                      </div>  
                 ))}
